@@ -4,7 +4,6 @@ class Solution(object):
         :type s: str
         :rtype: List[List[str]]
         """
-        # https://discuss.leetcode.com/topic/6186/java-backtracking-solution/2
         result = []
         curr = []
         self.recurPartition(result, curr, s, 0)

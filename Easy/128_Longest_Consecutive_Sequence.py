@@ -6,7 +6,6 @@ class Solution(object):
         """
 
         def longestConsecutive(self, num):
-            # Pop adjacency O(n) and O(n)
             num = set(num)
             maxLen = 0
             while num:

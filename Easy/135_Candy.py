@@ -4,7 +4,6 @@ class Solution(object):
         :type ratings: List[int]
         :rtype: int
         """
-        # https://discuss.leetcode.com/topic/5243/a-simple-solution
         if ratings is None or len(ratings) == 0:
             return 0
         ls = len(ratings)

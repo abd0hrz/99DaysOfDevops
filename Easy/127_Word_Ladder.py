@@ -7,8 +7,6 @@ class Solution(object):
         :type wordList: Set[str]
         :rtype: int
         """
-        # two way bfs
-        # one way is not sufficient
         wordList.discard(beginWord)
         wordList.discard(endWord)
         hash_map, res = {}, []
