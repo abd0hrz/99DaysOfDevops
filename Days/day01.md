@@ -243,7 +243,7 @@ Desktop  Documents
  
 * files within that path
  
-  ```bash
+```bash
 >>> import os
 >>> os.walk("/etc/tuned")
 <generator object walk at 0x7f786ea508e0>>>> list(os.walk("/etc/tuned"))
