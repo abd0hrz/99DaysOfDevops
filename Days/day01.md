@@ -234,4 +234,52 @@ Desktop  Documents
  NOTE: os.system (which is just a thin wrapper around the POSIX system call) runs the command in a shell launched as a child of the current process
 
  
+### OS.walk
+ To print the directory tree and all the files within that directory tree, we can use os. walk, which is a generator and has a tuple of 3 values
+
+    * directories(dirpath)(The path you have given)
+ 
+    * directories within that path(dirname)
+ 
+    * files within that path
+ 
+  ```bash
+>>> import os
+>>> os.walk("/etc/tuned")
+<generator object walk at 0x7f786ea508e0>>>> list(os.walk("/etc/tuned"))
+[('/etc/tuned', ['recommend.d'], ['active_profile', 'tuned-main.conf', 'bootcmdline', 'profile_mode']), ('/etc/tuned/recommend.d', [], [])] 
+ ```
+ 
+ Now compare this with the output of ls -lR.
+  ```bash
+$ ls -lR /etc/tuned/
+/etc/tuned/:
+total 16
+-rw-r--r--. 1 root root   14 Jun 24 16:11 active_profile
+-rw-r--r--. 1 root root 1111 Mar 21  2019 bootcmdline
+-rw-r--r--. 1 root root    7 Jun 24 16:11 profile_mode
+drwxr-xr-x. 2 root root    6 Feb  2 16:30 recommend.d
+-rw-r--r--. 1 root root 1305 Feb  2 16:30 tuned-main.conf/etc/tuned/recommend.d:
+total 0
+ ```
+ 
+ OR we can execute this command.
+  ```bash
+>>> for dirname, dirpath, filename in os.walk("/etc/tuned"):
+...     print(dirname)
+...     print(dirpath)
+...     print(filename)
+... 
+/etc/tuned
+['recommend.d']
+['active_profile', 'tuned-main.conf', 'bootcmdline', 'profile_mode']
+/etc/tuned/recommend.d
+ ```
+ 
+ For more info, please refer to
+ 
+https://docs.python.org/3/library/os.html
+
+
+Now you have some idea about the OS module and how powerful it’s. 
 
