@@ -22,6 +22,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 To print the current working directory, use os.getcwd(). This is similar to pwd command in Linux.
+```bash
+>>> os.getcwd()
+'/home/ec2-user'
+```
+
 
 
     
