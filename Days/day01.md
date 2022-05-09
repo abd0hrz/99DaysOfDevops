@@ -1,4 +1,4 @@
-# Python OS Module
+# Day 01 – Python OS Module
 
 # Prerequisites
 
