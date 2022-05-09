@@ -34,3 +34,15 @@ To change path/current working directory os.chdir(<directory to change>). This i
 >>> os.getcwd()
 '/tmp'
 ```
+ 
+To print/list files in the current directory(it return a list) use os.listdir() . It’s similar to the ls -l command in Linux.
+
+```bash
+$ ls -ltr
+-rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 secret.txt
+-rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 reports.csv
+-rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 Junk.txt
+-rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 code_ideas.odt>>> os.listdir()
+['aristotle_politics.txt', 'cicero_disputations.txt', 'plato_republic.txt', 'secret.txt', 'Junk.txt', 'code_ideas.odt', 'reports.csv']
+``` 
+ 
