@@ -9,7 +9,7 @@ https://automatetheboringstuff.com/
     
 As a DevOps/System Admin, we encounter a task to interact with OS every day. OS module provides a portable way of using operating system-dependent functionality. In addition, it allows us to interact with the underlying operating system in different ways to automate tasks(e.g., creating/removing directories, check if the file/directory exists, etc.).
  
- ```python
+ ```bash
 # Open the Python prompt
 python3
 Python 3.8.7 (default, Feb  3 2021, 06:31:03)
