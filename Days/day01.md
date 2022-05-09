@@ -66,3 +66,52 @@ To create a file, use os.mknod().
 >>> os.listdir()
 ['aristotle_politics.txt', 'cicero_disputations.txt', 'plato_republic.txt', 'secret.txt', 'Junk.txt', 'code_ideas.odt', 'reports.csv', 'mytest']
 ```
+
+But now, let say we want to go one level deep, i.e., both test3 and test4 don’t exist; if we are trying to create a directory recursively, it will not work; to do that, we need to use os.makedirs().
+
+  ```bash
+>>> os.mkdir("test3/test4")
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'test3/test4'>>> os.makedirs("test3/test4")
+```
+ 
+To print, all the environment variables use os.environ. This is similar to the env command in Linux.
+ 
+  ```bash
+$ env
+XDG_SESSION_ID=9
+rvm_bin_path=/usr/local/rvm/bin
+HOSTNAME=cddebed89c1c.mylabserver.com
+GEM_HOME=/usr/local/rvm/gems/ruby-2.4.1
+TERM=xterm-256color
+SHELL=/bin/bash
+HISTSIZE=100000
+IRBRC=/usr/local/rvm/rubies/ruby-2.4.1/.irbrc
+OLDPWD=/home/cloud_user
+MY_RUBY_HOME=/usr/local/rvm/rubies/ruby-2.4.1
+USER=cloud_user
+
+_system_type=Linux
+rvm_path=/usr/local/rvm
+rvm_prefix=/usr/local
+MAIL=/var/spool/mail/cloud_user
+PATH=/usr/local/rvm/gems/ruby-2.4.1/bin:/usr/local/rvm/gems/ruby-2.4.1@global/bin:/usr/local/rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/rvm/bin:/home/cloud_user/.local/bin:/home/cloud_user/bin
+PWD=/home/cloud_user/Documents
+LANG=en_US.UTF-8
+_system_arch=x86_64
+_system_version=7
+HISTCONTROL=ignoredups
+rvm_version=1.29.3 (latest)
+SHLVL=1
+HOME=/home/cloud_user
+LOGNAME=cloud_user
+GEM_PATH=/usr/local/rvm/gems/ruby-2.4.1:/usr/local/rvm/gems/ruby-2.4.1@global
+XDG_DATA_DIRS=/home/cloud_user/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+XDG_RUNTIME_DIR=/run/user/1002
+RUBY_VERSION=ruby-2.4.1
+_system_name=CentOS
+_=/bin/env>>> os.environ
+environ({'XDG_SESSION_ID': '9', 'rvm_bin_path': '/usr/local/rvm/bin', 'HOSTNAME': 'cddebed89c1c.mylabserver.com', 'GEM_HOME': '/usr/local/rvm/gems/ruby-2.4.1', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'HISTSIZE': '100000', 'IRBRC': '/usr/local/rvm/rubies/ruby-2.4.1/.irbrc', 'OLDPWD': '/home/cloud_user', 'MY_RUBY_HOME': '/usr/local/rvm/rubies/ruby-2.4.1', 'USER': 'cloud_user', 'LS_COLORS': ,'_system_type': 'Linux', 'rvm_path': '/usr/local/rvm', 'rvm_prefix': '/usr/local', 'MAIL': '/var/spool/mail/cloud_user', 'PATH': '/usr/local/rvm/gems/ruby-2.4.1/bin:/usr/local/rvm/gems/ruby-2.4.1@global/bin:/usr/local/rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/rvm/bin:/home/cloud_user/.local/bin:/home/cloud_user/bin', 'PWD': '/home/cloud_user/Documents', 'LANG': 'en_US.UTF-8', '_system_arch': 'x86_64', '_system_version': '7', 'HISTCONTROL': 'ignoredups', 'rvm_version': '1.29.3 (latest)', 'SHLVL': '1', 'HOME': '/home/cloud_user', 'LOGNAME': 'cloud_user', 'GEM_PATH': '/usr/local/rvm/gems/ruby-2.4.1:/usr/local/rvm/gems/ruby-2.4.1@global', 'XDG_DATA_DIRS': '/home/cloud_user/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'XDG_RUNTIME_DIR': '/run/user/1002', 'RUBY_VERSION': 'ruby-2.4.1', '_system_name': 'CentOS', '_': '/bin/python3'})
+```
