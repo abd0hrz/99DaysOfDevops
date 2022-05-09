@@ -115,3 +115,23 @@ _system_name=CentOS
 _=/bin/env>>> os.environ
 environ({'XDG_SESSION_ID': '9', 'rvm_bin_path': '/usr/local/rvm/bin', 'HOSTNAME': 'cddebed89c1c.mylabserver.com', 'GEM_HOME': '/usr/local/rvm/gems/ruby-2.4.1', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'HISTSIZE': '100000', 'IRBRC': '/usr/local/rvm/rubies/ruby-2.4.1/.irbrc', 'OLDPWD': '/home/cloud_user', 'MY_RUBY_HOME': '/usr/local/rvm/rubies/ruby-2.4.1', 'USER': 'cloud_user', 'LS_COLORS': ,'_system_type': 'Linux', 'rvm_path': '/usr/local/rvm', 'rvm_prefix': '/usr/local', 'MAIL': '/var/spool/mail/cloud_user', 'PATH': '/usr/local/rvm/gems/ruby-2.4.1/bin:/usr/local/rvm/gems/ruby-2.4.1@global/bin:/usr/local/rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/rvm/bin:/home/cloud_user/.local/bin:/home/cloud_user/bin', 'PWD': '/home/cloud_user/Documents', 'LANG': 'en_US.UTF-8', '_system_arch': 'x86_64', '_system_version': '7', 'HISTCONTROL': 'ignoredups', 'rvm_version': '1.29.3 (latest)', 'SHLVL': '1', 'HOME': '/home/cloud_user', 'LOGNAME': 'cloud_user', 'GEM_PATH': '/usr/local/rvm/gems/ruby-2.4.1:/usr/local/rvm/gems/ruby-2.4.1@global', 'XDG_DATA_DIRS': '/home/cloud_user/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'XDG_RUNTIME_DIR': '/run/user/1002', 'RUBY_VERSION': 'ruby-2.4.1', '_system_name': 'CentOS', '_': '/bin/python3'})
 ```
+ 
+ If we are looking for any specific environment variable, os.environ.get(<variable name>)
+ 
+  ```bash
+>>> os.environ.get('LOGNAME')
+'cloud_user'
+```
+ 
+ To get the userid use os.getuid() or group id use os.getgid(). It’s similar to the id command in Linux.
+
+ 
+  ```bash
+$ id
+uid=1002(cloud_user) gid=1003(cloud_user) groups=1003(cloud_user),10(wheel)>>> os.getuid()
+1002
+    
+>>> os.getgid()
+1003
+```
+
