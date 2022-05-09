@@ -26,33 +26,11 @@ To print the current working directory, use os.getcwd(). This is similar to pwd 
 >>> os.getcwd()
 '/home/ec2-user'
 ```
-
-``bash
+To change path/current working directory os.chdir(<directory to change>). This is similar to the cd command in Linux.
+ 
+```bash
 # os.chdir(<directory to change>)
 >>> os.chdir("/tmp")# To verify your path now
 >>> os.getcwd()
 '/tmp'
 ```
-
-``bash
-$ ls -ltr
--rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 secret.txt
--rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 reports.csv
--rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 Junk.txt
--rw-rw-r--. 1 cloud_user cloud_user       0 Mar  8  2019 code_ideas.odt>>> os.listdir()
-['aristotle_politics.txt', 'cicero_disputations.txt', 'plato_republic.txt', 'secret.txt', 'Junk.txt', 'code_ideas.odt', 'reports.csv']
-```
-``bash
->>> os.listdir(path)>>> os.listdir("/etc")
-['fonts', 'crypttab', 'mtab', 'pki', 'rpm', 'yum.repos.d', 'yum', 'libuser.conf', 'audit', 'centos-release', 'rsyslog.d', 'issue', 'binfmt.d', 'issue.net', 'modules-load.d', 'os-release', 'security', 'tuned', 'redhat-release', 'DIR_COLORS', 'vimrc', 'system-release', 'sestatus.conf', 'fstab', 'system-release-cpe', 'tmpfiles.d', 'aliases', 'rc.local', 'bashrc', 'systemd', 'csh.cshrc', 'udev', 'csh.login', 'machine-id', 'environment', 'NetworkManager', 'exports', 'nsswitch.conf.bak', 'filesystems', 'inittab', 'group', 'adjtime', 'gshadow', 'networks', 'host.conf', 'cron.monthly', 'hosts', 'shadow-', 'hosts.allow', 'ppp', 'gconf', 'hosts.deny', 'rwtab', 'pulse', 'inputrc', 'nfsmount.conf', 'motd', 'rwtab.d', 'passwd', 'statetab', 'printcap', 'statetab.d', 'profile', 'profile.d', 'sysctl.conf', 'protocols', 'cron.hourly', 'securetty', 'cron.weekly', 'services', 'anacrontab', 'shadow', 'crontab', 'shells', 'X11', 'bash_completion.d', 'opt', 'pm', 'skel', 'sysconfig', 'xdg', 'xinetd.d', 'terminfo', 'default', 'polkit-1', 'ld.so.conf', 'ld.so.conf.d', 'my.cnf', 'nsswitch.conf', 'passwd-', 'dconf', 'rpc', 'cloud', 'ld.so.cache', 'ssh', 'man_db.conf', 'libaudit.conf', 'popt.d', 'alternatives', 'chkconfig.d', 'gnupg', 'avahi', 'init.d', 'rc.d', 'cron.d', 'rc0.d', 'cron.deny', 'rc1.d', 'grub.d', 'rc2.d', 'dnsmasq.conf', 'rc3.d', 'dnsmasq.d', 'rc4.d', 'updatedb.conf', 'rc5.d', 'dracut.conf', 'rc6.d', 'aliases.db', 'GREP_COLORS', 'libnl', 'gcrypt', 'pkcs11', 'wpa_supplicant', 'magic', 'sasl2', 'groff', 'ssl', 'dbus-1', 'samba', 'request-key.conf', 'request-key.d', 'kernel', 'virc', 'iproute2', 'selinux', 'gss', 'dracut.conf.d', 'krb5.conf', 'openldap', 'DIR_COLORS.256color', 'idmapd.conf', 'grub2.cfg', 'DIR_COLORS.lightbgcolor', 'rsyslog.conf', 'login.defs', 'pam.d', '.pwd.lock', 'logrotate.d', 'my.cnf.d', 'prelink.conf.d', 'sgml', 'group-', 'gshadow-', 'sysctl.d', 'yum.conf', 'netconfig', 'dhcp', 'xml', 'e2fsck.conf', 'exports.d', 'mke2fs.conf', 'depmod.d', 'modprobe.d', 'cron.daily', 'logrotate.conf', 'favicon.png', 'kdump.conf', 'makedumpfile.conf.sample', 'firewalld', 'audisp', 'postfix', 'chrony.conf', 'chrony.keys', 'rsyncd.conf', 'sudo-ldap.conf', 'sudo.conf', 'sudoers', 'sudoers.d', 'vconsole.conf', 'localtime', 'locale.conf', 'hostname', 'resolv.conf', 'grub.conf', 'plymouth', 'asound.conf', 'oddjob', 'oddjobd.conf', 'oddjobd.conf.d', 'gtk-2.0', 'libreport', 'UPower', 'udisks2', 'gdm', 'nanorc', 'wgetrc', 'mime.types', 'mailcap', 'ghostscript', 'centos-release-upstream', 'tcsd.conf', 'gssproxy', 'python', 'geoclue', 'la_version', '.updated', 'xrdp', 'amazon', 'init', 'subgid', 'subuid', 'nsswitch.conf.rpmnew', 'krb5.conf.d', 'GeoIP.conf', 'bluetooth', 'sysctl.conf.rpmnew', 'iscsi', 'chrony.keys.rpmnew', 'nfs.conf', 'kernel-reinstall-count', 'zprofile', 'bash.bashrc', 'rvmrc', 'libblockdev', 'multipath', 'lvm', 'trusted-key.key', 'glvnd', 'fuse.conf', 'egl', 'flatpak', 'libpaper.d', 'papersize', 'ImageMagick-6']
-```
-``bash
-
-```
-``bash
-
-```
-
-
-
-    
