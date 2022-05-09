@@ -148,7 +148,8 @@ Remove directory or remove directory recursively use os.rmdir() or remove direct
 OS Path module is a submodule of os and provides useful functions on pathnames.
 
 To get the base name or the final component of a pathname, use os.path.basename().
-    ```bash
+ 
+```bash
 >>> os.path.basename("/home/centos")
 'centos'
 ```
