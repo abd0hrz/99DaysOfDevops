@@ -237,11 +237,11 @@ Desktop  Documents
 ### OS.walk
  To print the directory tree and all the files within that directory tree, we can use os. walk, which is a generator and has a tuple of 3 values
 
-    * directories(dirpath)(The path you have given)
+* directories(dirpath)(The path you have given)
  
-    * directories within that path(dirname)
+* directories within that path(dirname)
  
-    * files within that path
+* files within that path
  
   ```bash
 >>> import os
