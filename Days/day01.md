@@ -144,3 +144,4 @@ Remove directory or remove directory recursively use os.rmdir() or remove direct
 >>> os.rename("testfile","testfile1")>>> os.listdir()
 ['aristotle_politics.txt', 'cicero_disputations.txt', 'plato_republic.txt', 'secret.txt', 'Junk.txt', 'code_ideas.odt', 'reports.csv', 'testfile1']
 ```
+### OS.path
