@@ -212,6 +212,21 @@ To check if the given path is a symbolic link, use os.path.islink(). It will ret
 >>> os.path.islink("/etc/rc0.d")
 True
  ```
+ 
+### OS.system
+ os.system is used to execute operating system commands. Think of it if you want to list a directory, you can use the (os.listdir() command), but you don’t want to memorize functionality provided by the os module and want to use the existing Linux command, you can use the os.system(). The other advantage is if you look at the command output, it returns exit code also(if the command executed successfully is zero(0) or non-zero if the command doesn’t execute successfully.
+  ```bash
+>>> os.path.islink("/etc/rc0.d")
+True
+ 
+ 
+ NOTE: You can’t store the command’s output executed by the os.system(). The only thing you can store is the return code. However, as you can see in the below code, it only stores the return code and the ls command output. If you want to store the output of the ls command, you need to use the subprocess module.
+ 
+  ```bash
+>>> os.path.islink("/etc/rc0.d")
+True
+ 
+ NOTE: os.system (which is just a thin wrapper around the POSIX system call) runs the command in a shell launched as a child of the current process
 
  
 
