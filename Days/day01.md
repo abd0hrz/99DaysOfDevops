@@ -134,4 +134,13 @@ uid=1002(cloud_user) gid=1003(cloud_user) groups=1003(cloud_user),10(wheel)>>> o
 >>> os.getgid()
 1003
 ```
-
+Remove directory or remove directory recursively use os.rmdir() or remove directory recursively use os.removedirs().
+  ```bash
+>>> os.rmdir("mytest")>>> os.removedirs("test3/test4")
+```
+ To rename a file use os.rename()
+   ```bash
+# To rename a fileos.rename(<file to rename>, <destination file name>)
+>>> os.rename("testfile","testfile1")>>> os.listdir()
+['aristotle_politics.txt', 'cicero_disputations.txt', 'plato_republic.txt', 'secret.txt', 'Junk.txt', 'code_ideas.odt', 'reports.csv', 'testfile1']
+```
