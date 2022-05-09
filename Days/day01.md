@@ -157,53 +157,60 @@ To get the base name or the final component of a pathname, use os.path.basename(
  To get the directory component of a pathname os.path.dirname().
 
  ```bash
->>> os.path.basename("/home/centos")
-'centos
+>>> os.path.dirname("/home/centos")
+'/home'
  ```
  
 To join two paths together, use os.path.join().
  
 ```bash
->>> os.path.basename("/home/centos")
-'centos
+>>> a = os.path.join(“/tmp”, “testhome”)
+>>> print(a)
+/tmp/testhome
  ```
  
 To split the pathname path into a pair, (head, tail) where the tail is the last pathname component and the head is everything leading up to that os.path.split().
  
  ```bash
->>> os.path.basename("/home/centos")
-'centos
+>>> os.path.split("/etc/tuned/recommend.d")
+('/etc/tuned', 'recommend.d')
  ```
 
  
 To return the size, in bytes, of the path os.path.getsize().
  
  ```bash
->>> os.path.basename("/home/centos")
-'centos
+>>> os.path.getsize("/etc/hosts")
+235
  ```
 
  
 To check if the path exists use os.path.exists(). It will return True if the path exists and False if it’s not.
  
  ```bash
->>> os.path.basename("/home/centos")
-'centos
+>>> os.path.exists("/etc/hosts")
+True
+>>> os.path.exists("/etc/hostsss")
+False
  ```
 
 In the same way, you can check the presence of file/directory os.path.isfile(). It will return True if the path exists and False if it’s not.
  
  ```bash
->>> os.path.basename("/home/centos")
-'centos
+>>> os.path.isfile("/etc/hosts")
+True
+>>> os.path.isfile("/etc")
+False
+>>> os.path.isdir("/etc")
+True
  ```
 
  
 To check if the given path is a symbolic link, use os.path.islink(). It will return True if the path exists and False if it’s not.
  
  ```bash
->>> os.path.basename("/home/centos")
-'centos
+>>> os.path.islink("/etc/rc0.d")
+True
  ```
 
  
