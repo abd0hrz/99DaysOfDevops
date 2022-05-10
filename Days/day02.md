@@ -100,5 +100,20 @@ If you save the above script in test_file.py and run it, it will return File exi
 python3 test_file.py
 File exist
 ```
+## Approach 3:
+Use of pathlib module
+
+This is the newest module and available starting from Python 3.4. It provides a clean object-oriented interface when dealing with Paths.
+```bash
+import pathlib
+>>> path = pathlib.Path("/etc/hosts")
+>>> path.exists()
+True
+>>> path.is_file()
+True
+>>> path.is_dir()
+False
+```
+
 
 
