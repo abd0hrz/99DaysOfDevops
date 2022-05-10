@@ -3,7 +3,7 @@
 Welcome to Day 3 of 99 Days of DevOps. The topic for today is a python script to search for a file. As a DevOps/System Administrator, this is one of the common tasks we encounter as a part of our daily job. The idea behind it is to create a find utility using Python to pass directory names and files to search.
 
 So far, our code looks like this, whereby using os.walk(), we are iterating over the /etc directory and then using os.path.join() we combine directory with the filename.
-```bash
+```python
 import os
 
 for dirpath, dirname, filename in os.walk("/etc"):
@@ -12,7 +12,7 @@ for dirpath, dirname, filename in os.walk("/etc"):
  ```
 
 To find out the specific file, we can use the if statement and then only print the complete path if the file matches.
-```bash
+```python
 if file == "hosts":
     print(comp_path)
 ```
