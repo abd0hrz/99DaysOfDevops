@@ -36,6 +36,27 @@ Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 PermissionError: [Errno 13] Permission denied: 'filetest'
 ```
+This time you got a different error PermissionError.
 
+Let’s explore one more use case in which you try to open a directory. This time you got IsADirectoryError.
+```bash
+>>> open("/etc")
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+IsADirectoryError: [Errno 21] Is a directory: '/etc'
+```
 
+We need to write our script in such a manner to handle these exceptions gracefully. To do this, we can use try/except block.
+```bash
+try:
+  with open("abc.txt") as f:
+    print(f.read())
+except Exception as e:
+  print(e)
+```
+
+If you try to execute the above code, you will get the below output
+```bash
+[Errno 2] No such file or directory: 'abc.txt'
+```
 
