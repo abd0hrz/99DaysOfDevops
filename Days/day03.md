@@ -17,7 +17,7 @@ if file == "hosts":
     print(comp_path)
 ```
 So our complete code will look like below.
-```bash
+```python
 import os
 
 for dirpath, dirname, filename in os.walk("/etc"):
