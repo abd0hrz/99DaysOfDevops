@@ -20,5 +20,22 @@ Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 FileNotFoundError: [Errno 2] No such file or directory: 'abc.txt'
 '/tmp'
+```
+
+Try to open a file to which you don’t have permission. You can create a file and then change the permission via chmod.
+```bash
+touch filetest
+chmod 100 filetest
+ls -l filetest
+---x------  1 plakhera  staff  0 Jun 27 16:50 filetest
+```
+Now in your Python console, try to open that file.
+```bash
+>>> open("filetest")
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+PermissionError: [Errno 13] Permission denied: 'filetest'
+```
+
 
 
