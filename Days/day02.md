@@ -14,5 +14,11 @@ Checking If the file exists or not is very important, as you want to make sure t
 Let start with open()
 
 In your python console, try to open a non-existing file using open(). You will get a FileNotFoundError.
+```bash
+>>> open("abc.txt")
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'abc.txt'
+'/tmp'
 
 
