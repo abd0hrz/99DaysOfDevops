@@ -85,7 +85,7 @@ optional arguments:
 ```
 
 Now you need to make few changes to your code. Rather than passing /etc to os.walk(), you need to pass args.pathname, and similarly, rather than passing filename directly, i.e., hosts, you need to pass args.filesearch.
-```bash
+```python
 for dirpath, dirname, filename in os.walk(args.pathname):
     for file in filename:
         comp_path= os.path.join(dirpath,file)
