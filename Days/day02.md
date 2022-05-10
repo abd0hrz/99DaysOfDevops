@@ -9,3 +9,10 @@ Checking If the file exists or not is very important, as you want to make sure t
 1- open()
 2- os.path()
 3- pathlib
+
+## Approach 1:
+Let start with open()
+
+In your python console, try to open a non-existing file using open(). You will get a FileNotFoundError.
+
+
