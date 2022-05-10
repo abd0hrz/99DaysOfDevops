@@ -60,3 +60,45 @@ If you try to execute the above code, you will get the below output
 [Errno 2] No such file or directory: 'abc.txt'
 ```
 
+## Approach 2:
+Use of os.path() sub-module.
+
+We will start with os.path.exists(). I already covered os.path() in my youtube video and on Day 1, so I will quickly breeze over it. os.path.exists() will return True if the file/directory exist else False.
+```bash
+>>> import os
+>>> os.path.exists("/etc/hosts")
+True
+>>> os.path.exists("/etc/abc.txt")
+False
+```
+
+NOTE: os.path.exists() works for both files as well as for directory().
+
+In some cases, after checking the file or directory exist, we need to make a distinction between file or directory. To do that, we need to use os.path.isfile() for file and os.path.isdir() for directory. It will return True if the file or directory exists; else, it will return False.
+```bash
+>>> os.path.isfile("/etc/hosts")
+True
+>>> os.path.isfile("/etc")
+False
+>>> os.path.isdir("/etc")
+True
+```
+
+Now, if you need to write your code, you need to use a combination of both. Using os.path.exists() first, check if the file exists and then check if it’s a file if you are checking for file or dir if you are checking for a directory using and.
+```bash
+import os
+filename="/etc/hosts"
+
+if os.path.exists(filename) and os.path.isfile(filename):
+    print("File exist")
+else:
+    print("File doesn't exist")
+```
+
+If you save the above script in test_file.py and run it, it will return File exists as an output as /etc/hosts file exist.
+```bash
+python3 test_file.py
+File exist
+```
+
+
