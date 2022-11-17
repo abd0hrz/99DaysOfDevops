@@ -9,7 +9,7 @@
 
 ### My HackerRank profile  
 
-<https://www.hackerrank.com/charlesartbr>
+<https://www.hackerrank.com/4bd0hrz>
 
 ![Python](badges/python.svg)
 ![10 Days of Statistics](badges/10-days-of-statistics.svg)
