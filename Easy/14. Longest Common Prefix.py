@@ -15,4 +15,5 @@ class Solution(object):
                 res += x
             else:
                 break
+                
         return res
