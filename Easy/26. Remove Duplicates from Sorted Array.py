@@ -8,5 +8,4 @@ class Solution(object):
                 nums[write] = nums[i]
                 lastNum = nums[i]
                 write += 1
-
         return write
