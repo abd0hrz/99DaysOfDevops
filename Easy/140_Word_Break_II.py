@@ -1,5 +1,5 @@
 class Solution(object):
-    # https://discuss.leetcode.com/topic/12997/11ms-c-solution-concise
+
     def __init__(self):
         self.solution = {}
 
