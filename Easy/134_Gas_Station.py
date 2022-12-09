@@ -5,7 +5,6 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        # https://discuss.leetcode.com/topic/5088/my-ac-is-o-1-space-o-n-running-time-solution-does-anybody-have-posted-this-solution
         ls = len(gas)
         begin, end = 0, ls - 1
         curr = gas[end] - cost[end]
