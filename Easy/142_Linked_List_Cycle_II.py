@@ -1,8 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
 class Solution(object):
     def detectCycle(self, head):
@@ -10,8 +5,7 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        # Two points
-        # https://discuss.leetcode.com/topic/2975/o-n-solution-by-using-two-pointers-without-change-anything
+
         try:
             fast = head.next.next
             slow = head.next

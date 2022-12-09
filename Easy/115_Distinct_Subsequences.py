@@ -5,7 +5,6 @@ class Solution(object):
         :type t: str
         :rtype: int
         """
-        # https://discuss.leetcode.com/topic/51131/space-o-mn-and-o-n-python-solutions
         dp = [[0 for j in xrange(0, len(t) + 1)] for i in xrange(0, len(s) + 1)]
         for j in xrange(1, len(t) + 1):
             dp[0][j] = 0
