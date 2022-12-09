@@ -1,6 +1,5 @@
 class Solution(object):
 
-
     def addBinary(self, a, b):
         res = ''
         lsa, lsb = len(a), len(b)

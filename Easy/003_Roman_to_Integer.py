@@ -1,3 +1,4 @@
+
 class Solution(object):
     def flipAndInvertImage(self, A):
         for row in A:
